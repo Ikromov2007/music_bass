@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.musicbass.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_bar_Fragment"
+            app:destination="@id/bar_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bar_Fragment"
+        android:name="com.app.musicbass.Bar_Fragment"
+        android:label="Music Library"
+        tools:layout="@layout/fragment_bar_" >
+        <action
+            android:id="@+id/action_bar_Fragment_to_fadedFragment"
+            app:destination="@id/fadedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fadedFragment"
+        android:name="com.app.musicbass.FadedFragment"
+        android:label="fragment_faded"
+        tools:layout="@layout/fragment_faded" />
+</navigation>
